@@ -16,7 +16,7 @@ class DashboardCubit extends HydratedCubit<DashboardState>{
   Future<void> fetchDashboardData() async{
     emit(state.copyWith(status: DashboardStatus.loading));
 
-    final result = await _fetchDashboard.call(NoParams());
+    final result = await _fetchDashboard(NoParams());
 
     result.fold((left) {
       emit(state.copyWith(status: DashboardStatus.failure));

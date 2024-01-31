@@ -2,8 +2,8 @@
 import 'package:dartz/dartz.dart';
 
 import '../../../../../core/errors/failure.dart';
-import '../../data/remote_database/dashboard_remote_database.dart';
-import '../entities/dashboard_model.dart';
+import '../databases/remote_database/dashboard_remote_database.dart';
+import '../../domain/entities/dashboard_model.dart';
 
 abstract class DashboardRepository{
   Future<Either<Failure, DashboardModel>> fetch();

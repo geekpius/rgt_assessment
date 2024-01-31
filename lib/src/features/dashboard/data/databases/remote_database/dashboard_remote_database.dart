@@ -1,8 +1,8 @@
 
-import '../../domain/entities/activity_model.dart';
-import '../../domain/entities/dashboard_model.dart';
-import '../../domain/entities/measure_model.dart';
-import '../../domain/entities/medication_model.dart';
+import '../../../domain/entities/activity_model.dart';
+import '../../../domain/entities/dashboard_model.dart';
+import '../../../domain/entities/measure_model.dart';
+import '../../../domain/entities/medication_model.dart';
 
 abstract class DashboardRemoteDatabase{
   Future<DashboardModel> fetch();

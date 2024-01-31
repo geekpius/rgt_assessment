@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../src/features/home/screens/home_screen.dart';
+import '../../src/features/home/presentation/screens/home_screen.dart';
 import 'app_routes.dart';
 
 class AppNavigator {

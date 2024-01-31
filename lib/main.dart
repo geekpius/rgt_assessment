@@ -3,11 +3,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:rgt_assessment/common/services/service_locator.dart';
 import 'package:rgt_assessment/core/observer/app_bloc_observer.dart';
-import 'package:rgt_assessment/src/dashboard/cubit/dashboard_cubit.dart';
 
-import 'common/utils/app_navigator_util.dart';
+import 'core/routes/app_navigator.dart';
+import 'core/routes/app_routes.dart';
+import 'core/services/service_locator.dart';
+import 'src/features/dashboard/presentation/cubit/dashboard_cubit.dart';
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,8 +37,8 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         initialRoute: AppRoute.home,
-        onGenerateRoute: AppNavigatorUtil.generateRoute,
-        navigatorKey: AppNavigatorUtil.navigatorKey,
+        onGenerateRoute: AppNavigator.generateRoute,
+        navigatorKey: AppNavigator.navigatorKey,
       ),
     );
   }
